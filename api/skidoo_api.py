@@ -14,4 +14,4 @@ class SkidooApi(Resource):
 
 
 
-api.add_resource(SkidooApi, '/')
+api.add_resource(SkidooApi, '/', '')
