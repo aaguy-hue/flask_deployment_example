@@ -29,6 +29,7 @@ from api.data_export_import_api import data_export_import_api
 from hacks.joke import joke_api  # Import the joke API blueprint
 from api.post import post_api  # Import the social media post API
 from api.snapshot_proxy import snapshot_proxy
+from api.skidoo_api import skidoo_api
 #from api.announcement import announcement_api ##temporary revert
 
 # database Initialization functions
@@ -64,6 +65,7 @@ app.config['KASM_API_KEY_SECRET'] = os.getenv('KASM_API_KEY_SECRET')
 
 
 # register URIs for api endpoints
+app.register_blueprint(skidoo_api)
 app.register_blueprint(python_exec_api)
 app.register_blueprint(javascript_exec_api)
 app.register_blueprint(user_api)
